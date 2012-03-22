@@ -12,3 +12,20 @@ We are not very good writers but we hope to turn this into a book at some point
 in the future. Until then, you might read the latest version here:
 
 `<http://readthedocs.org/projects/bitmazk-pte-ltd/>`_
+
+Contribution
+=============
+
+If you find typos, bugs, or anything else that might be improved, we would love
+to merge your pull request. To contribute your patch, we suggest the following
+workflow:
+
+* Fork this project
+* Create a feature branch
+* Implement your change
+* ``git add .``
+* ``make html``
+* Check if everything looks good
+* ``git clean -df``
+* ``git push``
+* Send us a pull request
