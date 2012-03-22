@@ -11,6 +11,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   introduction/foreword
+   introduction/who_are_we
+
 
 
 Indices and tables
