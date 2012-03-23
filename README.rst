@@ -29,3 +29,20 @@ workflow:
 * ``git clean -df``
 * ``git push``
 * Send us a pull request
+
+License
+========
+
+.. image:: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
+    :alt: Creative Commons License
+    :target: http://creativecommons.org/licenses/by-sa/3.0/
+
+Bitmazk Pte. Ltd. Documentation by `Bitmazk Pte. Ltd.`_ is licensed under a
+`Creative Commons Attribution-ShareAlike 3.0 Unported License`_.
+
+Permissions beyond the scope of this license may be available at
+`www.bitmazk.com`_.
+
+.. _Bitmazk Pte. Ltd.: http://www.github.com/bitmazk/bitmazk-book
+.. _Creative Commons Attribution-ShareAlike 3.0 Unported License: http://creativecommons.org/licenses/by-sa/3.0/
+.. _www.bitmazk.com: http://www.bitmazk.com
