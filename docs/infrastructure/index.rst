@@ -10,4 +10,5 @@ Contents:
    telephone_and_fax
    skype
    time_tracking
+   project_management
    github
