@@ -15,6 +15,7 @@ Contents:
    infrastructure/index
    code_conventions/index
    toolbelt/index
+   library
 
 
 Indices and tables
