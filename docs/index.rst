@@ -11,9 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   introduction/foreword
-   introduction/who_are_we
-
+   introduction/index
+   infrastructure/index
+   code_conventions/index
+   toolbelt/index
 
 
 Indices and tables

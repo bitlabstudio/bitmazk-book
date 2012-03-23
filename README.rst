@@ -21,13 +21,16 @@ to merge your pull request. To contribute your patch, we suggest the following
 workflow:
 
 * Fork this project
+* Clone your fork
+* ``mkvirtualenv -p python2.7 bitmazk_book``
+* ``pip install -r requirements.txt``
 * Create a feature branch
 * Implement your change
 * ``git add .``
 * ``make html``
 * Check if everything looks good
 * ``git clean -df``
-* ``git push``
+* ``git push -u origin branchname``
 * Send us a pull request
 
 License

@@ -1,5 +1,5 @@
 Foreword
-=========
+========
 
 We are Bitmazk. We are beautifying bits and bytes.
 
@@ -27,6 +27,8 @@ This document is an ongoing effort to solve two problems:
 * We want to describe every little detail about our company so that anyone can
   figure out if he or she wants to work in this environment.
 
-To some extend we are hereby open sourcing our whole company. We know that we
-are good but we are most certainly not perfect. If you think that we suck, fork
-us on GitHub and change our company (or start your own).
+To some extend we are hereby open sourcing our whole company. We think that we
+are good but we also know that we are not perfect. If you think that we suck,
+`fork us on GitHub`_ and change our company (or start your own).
+
+.. _fork us on GitHub: https://github.com/bitmazk/bitmazk-book
