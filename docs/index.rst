@@ -15,7 +15,8 @@ Contents:
    infrastructure/index
    code_conventions/index
    toolbelt/index
-   library
+   continuous_learning
+   library/index
 
 
 Indices and tables

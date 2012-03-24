@@ -1,2 +1,2 @@
-The Bitmazk Library
+Continuous Learning
 ===================
