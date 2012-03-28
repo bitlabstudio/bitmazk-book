@@ -7,7 +7,9 @@ Contents:
    :maxdepth: 2
 
    operating_system
+   autojump
    dotfiles
+   git
    ssh
    vim
    gnu_screen
