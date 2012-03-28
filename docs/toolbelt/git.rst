@@ -44,7 +44,7 @@ Git
 * how to remove a submodule
 
 TODO
-====
+----
 * branches
 * merging
 * merge conflicts
