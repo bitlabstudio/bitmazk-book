@@ -61,13 +61,15 @@ Workflow
 * git commit -> add as many commits as you want
 
 A new day dawns:
+
 * git co master
 * git pull -> get latest code from team members
 * git co feature_branch_name
 * git rebase master --> pull in code from team members into own branch and fix
   merge conflicts with ``git mergetool``
 
-When you are done with the feature
+When you are done with the feature:
+
 * codereview.sh master -> like git diff master
 * git co master
 * git merge --no-ff feature_branch_name
