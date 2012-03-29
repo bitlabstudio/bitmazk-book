@@ -16,3 +16,5 @@ Fixtures
 
 South
 -----
+
+* how to add a column
