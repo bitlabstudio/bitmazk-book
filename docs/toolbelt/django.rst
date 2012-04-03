@@ -1,6 +1,11 @@
 Django
 ======
 
+Django documentation
+--------------------
+* learn the tutorial
+* beware: topics vs. references
+
 Test Driven Development (TDD)
 -----------------------------
 
