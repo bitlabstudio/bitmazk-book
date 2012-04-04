@@ -22,4 +22,16 @@ Fixtures
 South
 -----
 
+* http://readthedocs.org/docs/south/en/latest/
+
+Adding your new app to South:
+* ./manage.py syncdb, because convert_to_south assumes that models and DB are
+  in sync already
+* ./manage.py convert_to_south appname
+
+Adding new column to model
+* implement new code
+* ./manage.py schemamigration appname --auto
+* ./manage.py migrate
+
 * how to add a column
