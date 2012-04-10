@@ -13,5 +13,6 @@ Contents:
    ssh
    vim
    gnu_screen
+   regex
    python
    django

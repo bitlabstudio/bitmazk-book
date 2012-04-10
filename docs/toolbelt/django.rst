@@ -6,6 +6,10 @@ Django documentation
 * learn the tutorial
 * beware: topics vs. references
 
+Making queries
+--------------
+* always use pk instead of id (``objects.get(pk=5)``)
+
 Test Driven Development (TDD)
 -----------------------------
 
@@ -33,6 +37,10 @@ General rules
   method with all its different parameters in that one test. In this case
   please write comments before each call that describe which case you are
   testing (since you don't describe this through the test method name any more)
+* In a TestCase class, the setUp and tearDown methods come first. After that
+  getter methods follow, after that test methods follow. Test methods should
+  appear in a logical order as you develop the app, simplest tests first, edge
+  cases later.
 
 Mixin
 +++++
