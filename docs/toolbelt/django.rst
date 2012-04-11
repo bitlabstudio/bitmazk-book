@@ -106,6 +106,15 @@ The workflow should be as follows:
   * admin <-- admin user
     password: test123
 
+Creating Models
+---------------
+
+* always add a verbose_name, almost always the same as the field name, just in
+  a normal human readable form (without _ and stuff)
+* we like to make CharFields of length 1,2,4,8,16,32,64,128,256... we dont't
+  know why :)
+
+
 South
 -----
 

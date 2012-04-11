@@ -40,3 +40,11 @@ Breaking lines
       if (this == that
           and that == this):
           foobar()
+
+Strings
+-------
+
+* always use ' and not "
+* use " only when the string inside has a '::
+
+      foo = "It's just like this!"
