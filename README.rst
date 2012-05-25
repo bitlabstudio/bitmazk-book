@@ -18,20 +18,20 @@ Contribution
 
 If you find typos, bugs, or anything else that might be improved, we would love
 to merge your pull request. To contribute your patch, we suggest the following
-workflow:
+workflow::
 
-* Fork this project
-* Clone your fork
-* ``mkvirtualenv -p python2.7 bitmazk_book``
-* ``pip install -r requirements.txt``
-* Create a feature branch
-* Implement your change
-* ``git add .``
-* ``make html``
-* Check if everything looks good
-* ``git clean -df``
-* ``git push -u origin branchname``
-* Send us a pull request
+    # Fork this project
+    # Clone your fork
+    $ mkvirtualenv -p python2.7 bitmazk_book
+    $ pip install -r requirements.txt
+    $ git co -b your_feature_branch
+    $ cd docs
+    # Implement your change
+    $ git add .
+    $ make html
+    # Check if everything looks good
+    # git push -u origin branchname
+    # Send us a pull request
 
 License
 ========
