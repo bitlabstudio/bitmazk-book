@@ -29,6 +29,7 @@ workflow::
     # Implement your change
     $ git add .
     $ make html
+    $ open _build/html/index.html
     # Check if everything looks good
     # git push -u origin branchname
     # Send us a pull request
