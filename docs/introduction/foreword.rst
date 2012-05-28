@@ -1,7 +1,8 @@
 Foreword
 ========
 
-Bitmazk.  
+Bitmazk.
+
 Beautifying bits and bytes.
 
 We are a small web agency providing full stack services for Python and Django
