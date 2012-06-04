@@ -17,7 +17,9 @@ General rules
 +++++++++++++
 * Whenever you create a file in a Django app, you also create a
   filename_tests.py file in the tests folder.
-* Remember to add the new filename_tests.py file to tests/__init__.py
+* If you are going to write an integration test (i.e. views_tests) then put
+  it into a ``integration_tests`` subdirectory. That way we can chose to run
+  unittests only and exclude integration tests for everyday work.
 * Test cases are named after the thing that is tested. If we test a class named
   ``Foo`` then the test case will be named ``FooTestCase``. If we test a method
   named ``foo_bar()`` then the test case will be named ``FooBarTestCase``.
@@ -35,8 +37,9 @@ General rules
   and that TestCase has a setUp / tearDown that does a lot of stuff on the
   database, it might me more performant to just write one test and call the
   method with all its different parameters in that one test. In this case
-  please write comments before each call that describe which case you are
-  testing (since you don't describe this through the test method name any more)
+  please write assertion messages for each assert that describe which case you
+  are testing (since you don't describe this through the test method name any
+  more)
 * In a TestCase class, the setUp and tearDown methods come first. After that
   getter methods follow, after that test methods follow. Test methods should
   appear in a logical order as you develop the app, simplest tests first, edge
