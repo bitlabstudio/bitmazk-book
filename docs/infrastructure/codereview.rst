@@ -9,6 +9,8 @@ Workflow
 --------
 
 * git co master
+* git fetch --all
+* git remote prune origin
 * git pull
 * git co -b feature_branch
 * implement feature until you are happy
