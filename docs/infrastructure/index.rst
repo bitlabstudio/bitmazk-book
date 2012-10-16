@@ -13,3 +13,4 @@ Contents:
    project_management
    github
    codereview
+   barkeep
