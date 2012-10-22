@@ -51,3 +51,22 @@ Workflow and rules
 4. When someone leaves comments for you and suggests improvements, please do
    them in a new commit. The commit message should be `codereview fixes for
    6jau2hrd`.
+
+How to add new repos
+--------------------
+
+1. SSH into out barkeep server
+2. Form there, SSH into the server that contains the repo. You will be asked
+   to add that new server to barkeep's `known_hosts` file.
+3. Add barkeep's public RSA key (`cat ~/.ssh/id_rsa.pub`) to the repo-server's
+   `authorized_keys` file.
+4. Now barkeep should be able to SSH into the server that contains the repo
+   without needing a password.
+5. Browse to our barkeep instance and go to `/admin/repos/`
+6. Add the new repo
+   (`username@username.webfactional.com:/home/username/webapps/git/repos/projectname.git`)
+7. Reload the page. The new repo should be shown under the headline
+   `Repos scheduled to be cloned`
+8. Reload the page a few more times until the repo is no longer shown under
+   that headline. Now scroll down all the way and check in the
+   `clone_new_repo.log` if it says `Finished cloning the repo [reponame]`
