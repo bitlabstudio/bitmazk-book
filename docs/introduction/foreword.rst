@@ -45,8 +45,8 @@ This document is an ongoing effort to solve a few problems:
 * To find out who we are why we do this and what we have to offer
 * To describe every little detail about our company as a form of self
   reflection and self auditing
-* To spread the word and find those rare peer early adopters that might love to
-  work with us
+* To spread the word and find those rare crazy people that would love to work
+  with us
 
 To some extend we are hereby open sourcing our whole company. We think that we
 are good but we also know that we are not perfect. If you think that we suck
