@@ -13,6 +13,7 @@ Contents:
 
    introduction/index
    infrastructure/index
+   workflows/index
    code_conventions/index
    toolbelt/index
    continuous_learning
