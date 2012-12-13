@@ -12,10 +12,11 @@ characters. Therefore for HTML it is OK tp produce lines that are longer and
 aim for code that has very consequent indentation.
 
 
-Hyphens??
-+++++++
+Quote marks
++++++++++++
 
-We use `"` to wrap HTML tag attributes and templatetag parameters.
+We use double quote marks (``"``) to wrap HTML tag attributes and templatetag
+parameters.
 
 Example::
 
@@ -26,11 +27,10 @@ Example::
 Indentation
 +++++++++++
 
-Almost everything should be indented by 4 spaces. The only exception are `{%
-block %}` tags. Since they usually appear at root level only it is ok to not
-indent the code inside a block tag.
+Almost everything should be indented by 4 spaces. The only exception are ``{%
+block %}`` tags and ``{% blocktrans %}`` tags.
 
-Example::
+Example for a ``{% block %}`` tag::
 
     {% block main %}
     <body>
@@ -42,6 +42,18 @@ Example::
         {% endfor %}
     </body>
     {% endblock %}
+
+
+Example for a ``{% blocktrans %}`` tag::
+
+    <ul>
+        <li>
+            {% blocktrans %}
+            Hello world!
+            This is a blocktransified text.
+            {% endblocktrans %}
+        </li>
+    </ul>
 
 
 Casing
@@ -86,7 +98,7 @@ Django templates
 i18n
 ++++
 
-Always wrap all string in `{% trans "" %}` tags.
+Always wrap all string in ``{% trans "" %}`` tags.
 
 Example::
 
@@ -97,7 +109,8 @@ Example::
 URLs
 ++++
 
-Always construct all URLs with the `{% url "" %}` tag.
+Always construct all URLs with the ``{% url "" %}`` tag. Make sure to load url
+from future.
 
 Example::
 
