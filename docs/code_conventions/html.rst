@@ -49,8 +49,9 @@ Example for a ``{% blocktrans %}`` tag::
     <ul>
         <li>
             {% blocktrans %}
-            Hello world!
-            This is a blocktransified text.
+            Hello world! This is a blocktransified text. And we use it when we
+            want to translate a big block of text, that possibly spans multiple
+            lines.
             {% endblocktrans %}
         </li>
     </ul>
