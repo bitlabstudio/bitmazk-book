@@ -27,7 +27,7 @@ into our jobs.
 
 Please take this with a grain of salt. If you wanted to invent the next
 programming language or worked as a software engineer for NASA, it would
-probably a good idea to have some extensive university knowledge backing up
+probably be a good idea to have some extensive university knowledge backing up
 your tasks. But we are doing web-development here. This is more like an art and
 less like a *serious* profession (it is still serious, but in a less
 life-threatening way than writing software for sending people to mars).
