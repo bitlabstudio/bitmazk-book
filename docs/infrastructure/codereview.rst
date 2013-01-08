@@ -1,55 +1,62 @@
 Codereview
 ==========
 
-* download codereview.sh from bitmazk-environment
-* download it into your bin folder and give chmod +x
-* URL of codereview tool: http://codereview.bitmazk.com
+Currently we use barkeep to review our code.
 
-Workflow
---------
+http://getbarkeep.org/ 
 
-* git co master
-* git fetch --all
-* git remote prune origin
-* git pull
-* git co -b feature_branch
-* implement feature until you are happy
-* git st
-* BEFORE git add . do this:
-* codereview.sh
-* it will ask you to give a topic
-* authenticate with your.name@bitmazk.com and your gmail password
-* then go to codereview.bitmazk.com
-* open the new issue
-* jump through all changes with n and to next file with j
-* double click lines where you think they need further explanation
-* click at "Publish+Mail Comments" link
-* add reviewers (tob, mar)
-* add general message if necessary
-* git add . && git commit
 
-if you already committed, you can send a codereview like this:
+Committing
+----------
 
-* git lg -> shows all short hashes
-* git diff DH8s82S..298SJ2h -> make sure that this is the stuff you want to
-  submit
-* codereview.sh DH8s82S..298SJ2h -> codereview takes the same parameters as git
-  diff
+When the project is added to barkeep, you just push your code and after a few
+moments barkeep will have added the commit to the list.
 
-if you already added changes via git add
+Issues
+------
 
-* git diff HEAD
-* codereview.sh HEAD
+If someone finds something that needs improvement, he will comment on the line 
+where the mistake is found. Also if something is unclear, questions will be 
+asked in the same manner directly attached to the corresponding lines.
 
-When someone did the review and found bugs
+When someone fixes the issue, one comments with "DONE" on the related issue,
+so the reviewer knows, that a patch is about to be uploaded. After fixing all
+issues one adds a general comment with "fixed in <commit number>" for reference
+purposes and to show, that the fixes have been made.
 
-* go to same feature branch, or start a new one
-* implement changes
-* codereview.sh -i issue_number
-* Topic: Implemented comments by XYZ
-* Go to codereview.bitmazk.com
-* browse through patch, add comments where needed
-* and publish+mail comments
+If a fix is expected to be bigger, it is possible to add a Trello card for the
+issue and to link to it in a comment. The issue is then considered as about to
+be solved in later commits.
 
-When someone answers with LGTM:
-* go to codereview.bitmazk.com and close the issue (via edit link)
+Suggestions
+-----------
+
+If there is something, that is not really a mistake but just a suggestion for
+improval you add "SUGGESTION" to the comment. Suggestions don't need to be
+fixed in the patch set like the regular issues.
+
+Approving commits
+-----------------
+
+If all issues are fixed or there were no mistakes at all, the commit can be
+approved.
+
+If a reviewer is not 100% sure about the code, but has not found any real
+mistakes, he can add "LGTM" for "looks good to me". If the last one to review
+the commit would also add a "LGTM" he can just approve the commit, since no
+mistakes were found.
+But keep in mind, that this can be a hint for the programmer that wrote the 
+code, that it might need further commenting or better structure, since the code 
+was not really understandable to all of his fellow colleagues.
+
+Lists in barkeep
+----------------
+
+You can create custom filtered lists on barkeep according to different
+criteria.
+
+It is advised to have at least a list with unapproved commits of all
+branches and repositories and a list of all commits in general, that you can 
+adjust to email notifications for new commits and comments.
+With this it is easy to keep track of new commits and such that still need
+approval.
