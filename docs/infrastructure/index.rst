@@ -12,5 +12,4 @@ Contents:
    time_tracking
    project_management
    github
-   codereview
    barkeep
