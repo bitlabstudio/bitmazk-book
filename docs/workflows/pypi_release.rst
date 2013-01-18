@@ -10,13 +10,12 @@ can easily install them via ``pip install package-name``.
 
 For the following description please understand the following terms:
 
-Current release
----------------
+**Current release**
 
 This is the release that is currently the latest release on PyPi. The
 ``CHANGELOG.txt`` of a project could look like this::
 
-    ==== 0.5 (ongoing) ===
+    ==== (ongoing) ===
 
     * Added this and that
 
@@ -27,14 +26,31 @@ This is the release that is currently the latest release on PyPi. The
 
 In this example, ``0.4`` is the current release.
 
-Ongoing release
+**Ongoing release**
+
+Given the example ``CHANGELOG.txt`` from above, the ongoing release is labelled
+as ``(ongoing)``. This is the release that you would get if you cloned the
+current master branch from github. You cannot install this release form PyPi,
+yet, because it is still ongoing and we don't know which version number it will
+get, yet.
+
+
+Version numbers
 ---------------
 
-Given the example ``CHANGELOG.txt`` from above, the ongoing release would be
-``0.5``. This is the release that you would get if you cloned the current 
-master branch form github. You cannot install this release form PyPi yet, 
-because it is still ongoing, but we are planning to call the next release like 
-this.
+It's a science of it's own to do proper version number management. Here is how
+we handle it:
+
+* All packages start with version ``0.1``.
+* When we introduce a new feature, we increase the sub-version to ``0.2``.
+* When we add a bugfix or feature improvement, we increase the sub-sub-version
+  to ``0.2.1``.
+* When we think that the package is finally feature complete, we increase the
+  major version to ``1.0``.
+* A major version bump often means that the package might have backwards
+  incompatible changes or that it depends on new major versions of other
+  packages (such as Django).
+
 
 Uploading a new PyPi Release
 ----------------------------
@@ -48,15 +64,16 @@ needs to be done:
   ``CHANGELOG.txt``
 * Commit and push your patch
 * Now it is time to prepare a new release. For this we need to bump the version
-  number.
-* Open ``CHANGELOG.txt`` and add a new headline with a new version. Mark is as
-  ``ongoing``, remove the ``ongoing`` from the last version.
+  number. Version number bumps should always be their own commits and never be
+  done alongside normal patches.
+* Open ``CHANGELOG.txt`` and add a new headline called ``(ongoing)``.
+* Remove the ``ongoing`` from the last version and give it a new version
+  number. Above you can find more information no how we chose version numbers.
 * Open ``packagename/__init__.py`` and increase the version number to the new
   current release.
-* Commit those two files. The commit message should be: `Version bump to vX.X`
-* Run ``git tag -a X.X`` where ``X.X`` is the new current release (not the 
-  ongoing one but the one to which you have just bumped). Add ``vX.X`` as a 
-  message for that tag.
+* Commit those two files. The commit message should be: `Released vX.X`
+* Run ``git tag -a X.X`` where ``X.X`` is the new current release.
+* Add ``vX.X`` as a message for that tag.
 * Push your changes.
 
 At this point the new release is done on Github. The new tag signals to fellow
@@ -71,8 +88,9 @@ is time to upload this release to PyPi:
   ``MANIFEST.in`` file, and repeat the last three steps.
 * Also make sure that there are no missing files, such as HTML files of
   ``templates`` folder that you have newly added or ``*.md`` files for online
-  documentation. By default the ``MANIFEST.in`` only includes all ``*.py`` files
-  recursively below the package name. Anything else must be added explicitly.
+  documentation. By default the ``MANIFEST.in`` only includes all ``*.py``
+  files recursively below the package name. Anything else must be added
+  explicitly.
 * When the files included in the distribution look good, run ``python setup.py
   sdist upload``
 * Celebrate your new release!
