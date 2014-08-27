@@ -57,15 +57,32 @@ Example for a ``{% blocktrans %}`` tag::
     </ul>
 
 
-Casing
-++++++
+Casing & class names
+++++++++++++++++++++
 
 HTML tags and attributes are written in minor letters. CSS classes, names and
-IDs are written in camelCase casing, starting with a minor letter.
+IDs are written in as variables with dash in order to follow the naming
+conventions of the Twitter Bootstrap CSS framework.
 
 Example::
 
-    <h1 id="mainElement" name="mainElement" class="mainElement></h1>
+    <h1 id="unique-element" name="some-name" class="element-class"></h1>
+
+
+Data attributes
++++++++++++++++
+
+Never reference IDs, names or classes in JavaScript. The risk that someone
+changes the class on an element and then accidentally breaks some JavaScript
+is too big.
+
+If you need to identify a unique element via JavaScript, use
+`$('[data-id="element"]')` and give the element that attribute. If you need to
+identify a group of elements use `$('[data-class="elements"]')`. In fact you
+can use any attribute name in order to add specific settings that can be read
+by your JavaScript to all elements. We just prepend `data-` to all those
+attributes because Twitter Bootstrap does the same and because it is a good
+convention to indicate that this attribtue is used by some JavaScript.
 
 
 Code blocks
@@ -86,11 +103,12 @@ Example::
 
 Ordering of attributes
 ++++++++++++++++++++++
-ID, name and class are always the first attributes for a HTML tag.
+ID, name and class are always the first attributes for a HTML tag. After that
+come data-attributes and then everything else.
 
 Example::
 
-    <img id="id_foo" name="foo" class="fooClass" src="..." />
+    <img id="id_foo" name="foo" class="foo-class" data-id="foobar" src="..." />
 
 
 Django templates
