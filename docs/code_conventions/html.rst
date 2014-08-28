@@ -104,11 +104,13 @@ Example::
 Ordering of attributes
 ++++++++++++++++++++++
 ID, name and class are always the first attributes for a HTML tag. After that
-come data-attributes and then everything else.
+come data-attributes and then everything else. For input elements, the type
+shall come first.
 
 Example::
 
     <img id="id_foo" name="foo" class="foo-class" data-id="foobar" src="..." />
+    <button type="submit" name="btn-foo" ...>Submit</button>
 
 
 Django templates
