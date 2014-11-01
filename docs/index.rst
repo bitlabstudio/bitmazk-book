@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    introduction/index
+   management/index 
    infrastructure/index
    workflows/index
    code_conventions/index
