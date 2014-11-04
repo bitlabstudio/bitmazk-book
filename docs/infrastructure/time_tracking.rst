@@ -21,7 +21,7 @@ alphabetically, by giving them similar names like ``CN: Foobar`` and
 
 Additionally we add one project for our own company. When we have company
 meetings that are not related to one specific project, we will track the time
-here. 
+here.
 
 Finally every team member get's their own project as well. When you are doing
 some research about some new technology or working on a personal side-project
@@ -55,12 +55,12 @@ JavaScript and jQuery related tasks will be tagged as such.
 ## design
 
 When doing work in Photoshop or just quickly creating vanilla Bootstrap markup
-for a prototype, it should be tracked as ``#design``. 
+for a prototype, it should be tracked as ``#design``.
 
 ## open-source
 
 Sometimes we have to update old open-source apps or react to issues or
-pull-requests. This is usually not covered by any customer budget, so it should 
+pull-requests. This is usually not covered by any customer budget, so it should
 be tracked as ``#open-source`` on the internal company project.
 
 ## documentation
@@ -97,6 +97,13 @@ All tasks that are not real programming tasks but infrastructure tasks are
 tagged as ``#server``. This includes setting up new Webfaction servers, adding
 cronjobs, running deployments, restarting the webserver and so on.
 
+## infrastructure
+
+When setting up new subdomains or setting up a new server to install an internal
+tool (like Gitlab), this is not really programming work and it is also not
+server work (in the sense that we sell this work to a customer). Instead, this
+is internal infrastrucutre work and should be tagged as such.
+
 ## setup
 
 When you need to mess around with your local development environment in order
@@ -116,5 +123,10 @@ sending invoices will be tagged as ``#finances``.
 
 ## acquisition
 
-Time spent for answering emails to potential customers is tagges as
-``#acquisition``.
+Time spent for answering emails to potential customers or spent for meetings
+with potential customers is tagges as ``#acquisition``.
+
+## management
+
+Anything that doesn't fit into any of the above tasks but somehow seems to be
+important to run the company an be tracked with ``#management``.
